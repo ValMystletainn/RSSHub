@@ -600,6 +600,9 @@
   "/bangumi/tv/user/blog/:id": [
     "nczitzk"
   ],
+  "/bangumi/tv/user/collections/:id/:subjectType/:type": [
+    "youyou-sudo"
+  ],
   "/bangumi/tv/user/wish/:id": [
     "honue"
   ],
@@ -1156,6 +1159,9 @@
   ],
   "/cebbank/quotation/history/:type": [
     "linbuxiao"
+  ],
+  "/ceph/blog/:topic?": [
+    "pandada8"
   ],
   "/cfachina/servicesupport/analygarden/:program?": [
     "TonyRL"
@@ -2379,7 +2385,7 @@
   "/github/contributors/:user/:repo/:order?/:anon?": [
     "zoenglinghou"
   ],
-  "/github/discussion/:user/:repo/:state?": [
+  "/github/discussion/:user/:repo/:state?/:category?": [
     "waynzh"
   ],
   "/github/file/:user/:repo/:branch/:filepath{.+}": [
@@ -2542,6 +2548,9 @@
   "/gov/cnnic/*": [],
   "/gov/csrc/auditstatus/:apply_id": [
     "hillerliao"
+  ],
+  "/gov/csrc/zfxxgk_zdgk/:id?": [
+    "nczitzk"
   ],
   "/gov/csrc/news/:suffix{.+}?": [],
   "/gov/customs/list/:gchannel?": [
