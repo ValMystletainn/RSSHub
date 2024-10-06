@@ -2572,27 +2572,107 @@
   },
   "a9vg": {
     "routes": {
-      "/": {
-        "path": "/",
+      "/:category{.+}?": {
+        "path": "/:category{.+}?",
+        "name": "新闻",
+        "url": "a9vg.com",
+        "maintainers": [
+          "monnerHenster",
+          "nczitzk"
+        ],
+        "example": "/a9vg/news",
+        "parameters": {
+          "category": "分类，默认为 ，可在对应分类页 URL 中找到, Category, by default"
+        },
+        "description": ":::tip\n  若订阅 [PS4](http://www.a9vg.com/list/news/PS4)，网址为 `http://www.a9vg.com/list/news/PS4`。截取 `http://www.a9vg.com/list` 到末尾的部分 `news/PS4` 作为参数填入，此时路由为 [`/a9vg/news/PS4`](https://rsshub.app/a9vg/news/PS4)。\n  :::\n\n  | 分类                                               | ID                                                     |\n  | -------------------------------------------------- | ------------------------------------------------------ |\n  | [All](https://www.a9vg.com/list/news/All)          | [news/All](https://rsshub.app/a9vg/news/All)           |\n  | [PS4](https://www.a9vg.com/list/news/PS4)          | [news/PS4](https://rsshub.app/a9vg/news/PS4)           |\n  | [PS5](https://www.a9vg.com/list/news/PS5)          | [news/PS5](https://rsshub.app/a9vg/news/PS5)           |\n  | [Switch](https://www.a9vg.com/list/news/Switch)    | [news/Switch](https://rsshub.app/a9vg/news/Switch)     |\n  | [Xbox One](https://www.a9vg.com/list/news/XboxOne) | [news/XboxOne](https://rsshub.app/a9vg/news/XboxOne)   |\n  | [XSX](https://www.a9vg.com/list/news/XSX)          | [news/XSX](https://rsshub.app/a9vg/news/XSX)           |\n  | [PC](https://www.a9vg.com/list/news/PC)            | [news/PC](https://rsshub.app/a9vg/news/PC)             |\n  | [业界](https://www.a9vg.com/list/news/Industry)    | [news/Industry](https://rsshub.app/a9vg/news/Industry) |\n  | [厂商](https://www.a9vg.com/list/news/Factory)     | [news/Factory](https://rsshub.app/a9vg/news/Factory)   |\n  ",
+        "categories": [
+          "game"
+        ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
         "radar": [
           {
             "source": [
-              "a9vg.com/list/news",
-              "a9vg.com/"
+              "www.a9vg.com/list/:category"
+            ]
+          },
+          {
+            "title": "All",
+            "source": [
+              "www.a9vg.com/list/news/All"
             ],
-            "target": ""
+            "target": "/news/All"
+          },
+          {
+            "title": "PS4",
+            "source": [
+              "www.a9vg.com/list/news/PS4"
+            ],
+            "target": "/news/PS4"
+          },
+          {
+            "title": "PS5",
+            "source": [
+              "www.a9vg.com/list/news/PS5"
+            ],
+            "target": "/news/PS5"
+          },
+          {
+            "title": "Switch",
+            "source": [
+              "www.a9vg.com/list/news/Switch"
+            ],
+            "target": "/news/Switch"
+          },
+          {
+            "title": "Xbox One",
+            "source": [
+              "www.a9vg.com/list/news/XboxOne"
+            ],
+            "target": "/news/XboxOne"
+          },
+          {
+            "title": "XSX",
+            "source": [
+              "www.a9vg.com/list/news/XSX"
+            ],
+            "target": "/news/XSX"
+          },
+          {
+            "title": "PC",
+            "source": [
+              "www.a9vg.com/list/news/PC"
+            ],
+            "target": "/news/PC"
+          },
+          {
+            "title": "业界",
+            "source": [
+              "www.a9vg.com/list/news/Industry"
+            ],
+            "target": "/news/Industry"
+          },
+          {
+            "title": "厂商",
+            "source": [
+              "www.a9vg.com/list/news/Factory"
+            ],
+            "target": "/news/Factory"
           }
         ],
-        "name": "Unknown",
-        "maintainers": [
-          "monnerHenster"
-        ],
-        "url": "a9vg.com/list/news",
-        "location": "a9vg.ts"
+        "location": "index.ts"
       }
     },
     "name": "A9VG 电玩部落",
-    "url": "a9vg.com"
+    "url": "a9vg.com",
+    "description": ""
   },
   "aamacau": {
     "routes": {
@@ -25263,6 +25343,35 @@
         ],
         "location": "activity.ts"
       },
+      "/advisor/data/:type?/:category?": {
+        "path": "/advisor/data/:type?/:category?",
+        "categories": [
+          "programming"
+        ],
+        "example": "/github/advisor/data/reviewed/composer",
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "github.com/advisories",
+              "github.com"
+            ]
+          }
+        ],
+        "name": "Github Advisory Database RSS",
+        "maintainers": [
+          "sd0ric4"
+        ],
+        "description": "\n| Type | Description | Explanation |\n| --- | --- | --- |\n| reviewed | Reviewed | 已审核 |\n| unreviewed | Unreviewed | 未审核 |\n\n| Category | Description | Explanation |\n| --- | --- | --- |\n| composer | Composer | PHP 依赖管理工具 |\n| go | Go | Go 语言包管理工具 |\n| maven | Maven | Java 项目管理工具 |\n| npm | NPM | Node.js 包管理工具 |\n| nuget | NuGet | .NET 包管理工具 |\n| pip | Pip | Python 包管理工具 |\n| pub | Pub | Dart 包管理工具 |\n| rubygems | RubyGems | Ruby 包管理工具 |\n| rust | Rust | Rust 包管理工具 |\n| erlang | Erlang | Erlang 包管理工具 |\n| actions | Actions | GitHub Actions |\n| swift | Swift | Swift 包管理工具 |",
+        "location": "advisor.ts"
+      },
       "/branches/:user/:repo": {
         "path": "/branches/:user/:repo",
         "categories": [
@@ -40195,6 +40304,43 @@
     "name": "The Korea Institute of Marine Law",
     "url": "kimlaw.or.kr"
   },
+  "kisskiss": {
+    "routes": {
+      "/blog/:category?": {
+        "path": "/blog/:category?",
+        "categories": [
+          "game"
+        ],
+        "example": "/blog/DLC",
+        "parameters": {
+          "category": "category"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "www.kisskiss.tv/kiss/diary.php"
+            ],
+            "target": "/blog"
+          }
+        ],
+        "name": "ブログ",
+        "maintainers": [
+          "keocheung"
+        ],
+        "location": "blog.ts"
+      }
+    },
+    "name": "KISS",
+    "url": "www.kisskiss.tv"
+  },
   "konachan": {
     "routes": {
       "/post/popular_recent/:period?": {
@@ -45914,8 +46060,27 @@
         "example": "/mi/crowdfunding",
         "name": "小米众筹",
         "maintainers": [
-          "DIYgod"
+          "DIYgod",
+          "nuomi1"
         ],
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportRadar": true,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "radar": [
+          {
+            "source": [
+              "m.mi.com/crowdfunding/home"
+            ],
+            "target": "/crowdfunding"
+          }
+        ],
+        "view": 5,
         "location": "crowdfunding.ts"
       },
       "/golden": {
@@ -58944,6 +59109,34 @@
     },
     "name": "ResearchGate",
     "url": "researchgate.net"
+  },
+  "resonac": {
+    "routes": {
+      "/products": {
+        "path": "/products",
+        "categories": [
+          "other"
+        ],
+        "example": "/resonac/products",
+        "parameters": {},
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": true,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "Products",
+        "maintainers": [
+          "valuex"
+        ],
+        "description": "",
+        "location": "products.ts"
+      }
+    },
+    "name": "Resonac",
+    "url": "www.resonac.com"
   },
   "reuters": {
     "routes": {
@@ -77171,6 +77364,35 @@
     },
     "name": "西安理工大学",
     "url": "index.xaut.edu.cn"
+  },
+  "xbookcn": {
+    "routes": {
+      "/:label?": {
+        "path": "/:label?",
+        "categories": [
+          "reading"
+        ],
+        "example": "/xbookcn/精选作品",
+        "parameters": {
+          "label": "按名称分类，详见https://blog.xbookcn.net/p/all.html"
+        },
+        "features": {
+          "requireConfig": false,
+          "requirePuppeteer": false,
+          "antiCrawler": false,
+          "supportBT": false,
+          "supportPodcast": false,
+          "supportScihub": false
+        },
+        "name": "短篇",
+        "maintainers": [
+          "Lyunvy"
+        ],
+        "location": "blog.ts"
+      }
+    },
+    "name": "中文成人文學網",
+    "url": "www.xbookcn.net"
   },
   "xboxfan": {
     "routes": {
