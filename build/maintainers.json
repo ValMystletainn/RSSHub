@@ -245,9 +245,8 @@
     "nczitzk"
   ],
   "/9to5/:subsite/:tag?": [],
-  "/a9vg/:category{.+}?": [
-    "monnerHenster",
-    "nczitzk"
+  "/a9vg/": [
+    "monnerHenster"
   ],
   "/aamacau/:category?/:id?": [],
   "/abc/:category{.+}?": [
