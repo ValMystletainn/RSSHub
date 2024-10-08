@@ -4557,6 +4557,19 @@
       }
     ]
   },
+  "cohere.com": {
+    "_name": "Cohere",
+    ".": [
+      {
+        "title": "Blog",
+        "docs": "https://docs.rsshub.app/routes/blog",
+        "source": [
+          "/"
+        ],
+        "target": "/cohere/blog"
+      }
+    ]
+  },
   "coindesk.com": {
     "_name": "CoinDesk Consensus Magazine",
     ".": [
@@ -18338,7 +18351,7 @@
     ]
   },
   "nytimes.com": {
-    "_name": "The New York Times 纽约时报",
+    "_name": "The New York Times",
     ".": [
       {
         "title": "Best Seller Books",
@@ -18349,7 +18362,7 @@
         "target": "/nytimes/book/:category?"
       },
       {
-        "title": "新闻简报",
+        "title": "Daily Briefing",
         "docs": "https://docs.rsshub.app/routes/traditional-media",
         "source": [
           "/"

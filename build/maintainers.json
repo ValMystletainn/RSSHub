@@ -1391,6 +1391,9 @@
     "Fatpandac"
   ],
   "/codeforces/recent-actions/:minrating?": [],
+  "/cohere/blog": [
+    "Loongphy"
+  ],
   "/coindesk/consensus-magazine": [
     "jameshih"
   ],
@@ -4237,8 +4240,7 @@
     "pseudoyu"
   ],
   "/natgeo/dailyselection": [
-    "OrangeEd1t",
-    "pseudoyu"
+    "OrangeEd1t"
   ],
   "/natgeo/:cat/:type?": [
     "fengkx"
